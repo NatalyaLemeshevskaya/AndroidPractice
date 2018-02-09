@@ -11,6 +11,13 @@ public class HomeWork1Activity extends AppCompatActivity  implements View.OnClic
     Button b_mix;
     TextView textView1,textView2;
 
+    private View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            mix();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +37,7 @@ public class HomeWork1Activity extends AppCompatActivity  implements View.OnClic
 
 
         textView1.setOnClickListener(this);
+        textView2.setOnClickListener(listener);
 
     }
 
@@ -38,10 +46,6 @@ public class HomeWork1Activity extends AppCompatActivity  implements View.OnClic
         mix();
     }
 
-    public void clickTextView2(View view){
-       mix();
-
-    }
     public void mix(){
 
         String text1 = (String) textView1.getText();

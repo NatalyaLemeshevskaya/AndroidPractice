@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="#0a0909"
     tools:context="com.natallialemiasheuskaya.homework1.HomeWork2Activity">
 
 
@@ -97,14 +98,35 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:background="#f90509">
+                android:weightSum="3">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff">
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#e70408">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:background="#32c755">
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <!--Тайланд-->
 
             <!--Дания-->
+
 
 
 
