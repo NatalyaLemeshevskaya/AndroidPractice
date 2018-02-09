@@ -124,15 +124,53 @@
             </LinearLayout>
 
             <!--Тайланд-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:background="#e70408"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="#ffffff">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="#2757a4">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
 
             <!--Дания-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:background="#e70408">
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginLeft="60dp">
+                </LinearLayout>
 
 
-
-
-
-
-
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="55dp"
+                        android:background="#ffffff">
+                    </LinearLayout>
+            </RelativeLayout>
+            
 
 
         </LinearLayout>
