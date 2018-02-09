@@ -23,12 +23,7 @@ public class HomeWork1Activity extends AppCompatActivity  implements View.OnClic
         b_mix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String text1 = (String) textView1.getText();
-                String text2 = (String) textView2.getText();
-
-                textView1.setText(text2);
-                textView2.setText(text1);
+               mix();
 
             }
         });
@@ -40,24 +35,20 @@ public class HomeWork1Activity extends AppCompatActivity  implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        String text1 = (String) textView1.getText();
-        String text2 = (String) textView2.getText();
-
-        textView1.setText(text2);
-        textView2.setText(text1);
+        mix();
     }
 
     public void clickTextView2(View view){
-        String text1 = (String) textView1.getText();
-        String text2 = (String) textView2.getText();
-
-        textView1.setText(text2);
-        textView2.setText(text1);
+       mix();
 
     }
+    public void mix(){
 
+        String text1 = (String) textView1.getText();
 
-
+        textView1.setText(textView2.getText());
+        textView2.setText(text1);
+    }
 
 
 

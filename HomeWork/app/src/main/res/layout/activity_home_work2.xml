@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.natallialemiasheuskaya.homework1.HomeWork2Activity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Австрия-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#f90509"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="#ffffff">
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--Польша-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#f90509"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="#ffffff">
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--Италия-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="#f90509">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3fa922">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffffff">
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--Колумбия-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:background="#f90509">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="#f7dc2d">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="37.5dp"
+                    android:background="#fc2753f1">
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Мадагаскар-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:background="#f90509">
+
+
+            </LinearLayout>
+
+            <!--Тайланд-->
+
+            <!--Дания-->
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+</ScrollView>

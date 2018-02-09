@@ -15,4 +15,12 @@
         android:layout_height="wrap_content"
         android:text="HomeWork1"
         android:textAllCaps="false"/>
+
+
+    <Button
+        android:id="@+id/b_hw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HomeWork2"
+        android:textAllCaps="false"/>
 </LinearLayout>
