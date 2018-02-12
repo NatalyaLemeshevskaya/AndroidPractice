@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dab9df"
+    android:orientation="vertical"
+    tools:context="com.natallialemiasheuskaya.homework1.HomeWork3Activity">
+
+    <ImageView
+        android:id="@+id/imageCat"
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:id="@+id/buttonClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="button"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/uri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:inputType="textUri"/>
+
+</LinearLayout>
