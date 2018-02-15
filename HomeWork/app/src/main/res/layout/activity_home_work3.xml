@@ -4,30 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dab9df"
+    android:background="#89c189"
     android:orientation="vertical"
-    tools:context="com.natallialemiasheuskaya.homework1.HomeWork3Activity">
+    android:padding = "10dp"
+    tools:context="com.natallialemiasheuskaya.homework3.HomeWork3Activity">
+
+
 
     <ImageView
-        android:id="@+id/imageCat"
+        android:id="@+id/imageTree"
         android:layout_marginTop="20dp"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginLeft="30dp"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
 
     <Button
-        android:id="@+id/buttonClick"
+        android:id="@+id/buttonTree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#fff"
         android:textSize="20dp"
-        android:text="button"
+        android:text="Would you like to see a beautiful tree?"
         android:layout_gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/uri"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:inputType="textUri"/>
+
+    <TextView
+        android:id="@+id/textWow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+
 
 </LinearLayout>

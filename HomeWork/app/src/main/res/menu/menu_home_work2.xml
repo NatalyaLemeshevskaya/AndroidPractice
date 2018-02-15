@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.natallialemiasheuskaya.homework1.HomeWork2Activity">
+    tools:context="com.natallialemiasheuskaya.homework1.com.natallialemiasheuskaya.homework2.HomeWork2Activity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

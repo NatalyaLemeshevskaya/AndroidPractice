@@ -1,7 +1,9 @@
-package com.natallialemiasheuskaya.homework1;
+package com.natallialemiasheuskaya.homework2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.natallialemiasheuskaya.homework1.R;
 
 public class HomeWork2Activity extends AppCompatActivity {
 

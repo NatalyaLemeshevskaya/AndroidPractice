@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.natallialemiasheuskaya.mainmenu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeWork1Activity" />
-        <activity android:name=".HomeWork2Activity" />
-        <activity android:name=".HomeWork3Activity"></activity>
+        <activity android:name="com.natallialemiasheuskaya.homework2.HomeWork2Activity" />
+        <activity android:name="com.natallialemiasheuskaya.homework3.HomeWork3Activity"></activity>
     </application>
 
 </manifest>
