@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.homework1;
+package com.natallialemiasheuskaya;
 
 import org.junit.Test;
 

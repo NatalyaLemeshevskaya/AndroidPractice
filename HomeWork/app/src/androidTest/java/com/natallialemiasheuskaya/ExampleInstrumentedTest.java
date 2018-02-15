@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.homework1;
+package com.natallialemiasheuskaya;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
