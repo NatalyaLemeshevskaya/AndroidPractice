@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.natallialemiasheuskaya.homework1">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +20,10 @@
         </activity>
         <activity android:name=".HomeWork1Activity" />
         <activity android:name="com.natallialemiasheuskaya.homework2.HomeWork2Activity" />
-        <activity android:name="com.natallialemiasheuskaya.homework3.HomeWork3Activity"></activity>
+        <activity android:name="com.natallialemiasheuskaya.homework3.HomeWork3Activity" />
+        <activity android:name="com.natallialemiasheuskaya.homework4.HomeWork4Activity" />
+        <activity android:name="com.natallialemiasheuskaya.homework4.OwlActivity" />
+        <activity android:name="com.natallialemiasheuskaya.homework4.ClockActivity"></activity>
     </application>
 
 </manifest>
