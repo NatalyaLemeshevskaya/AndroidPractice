@@ -43,6 +43,7 @@ public class HomeWork4Activity extends AppCompatActivity implements View.OnClick
             case R.id.clockButton:{
                 intent = new Intent(this,ClockActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
             }
 
