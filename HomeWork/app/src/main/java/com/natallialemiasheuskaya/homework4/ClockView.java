@@ -51,7 +51,7 @@ public class ClockView extends View{
 
         paintClock = new Paint();
         paintClock.setColor(Color.parseColor("#fdd9dae1"));
-        paintClock.setStyle(Paint.Style.FILL);
+        paintClock.setStyle(Paint.Style.STROKE);
         paintClock.setAntiAlias(true);
 
         paint = new Paint();
@@ -83,7 +83,8 @@ public class ClockView extends View{
 
         for(int i= 0; i<12; i++) {
             canvas.rotate(30, cx, cy);
-            canvas.drawText(String.valueOf(i+1), cx -10, cy-radius+60, paint);
+            canvas.drawLine(cx,0,cx,25,paint);
+            canvas.drawText(String.valueOf(i+1), cx - 20, cy-radius+80, paint);
         }
 
 
@@ -104,7 +105,7 @@ public class ClockView extends View{
         int hour = (360/12)*hours;
         canvas.save();
         canvas.rotate(hour,cx,cy);
-        canvas.drawLine(cx, cy, cx, cy-radius+100, paint);
+        canvas.drawLine(cx, cy, cx, cy-radius+150, paint);
         canvas.restore();
 
 
