@@ -16,7 +16,7 @@ import java.util.TimeZone;
 
 public class ClockView extends View{
 
-    private Paint paintClock, paint;
+    private Paint paintClock, paint, paintSec;
     private float radius;
     private float cx,cy;
 
@@ -24,6 +24,7 @@ public class ClockView extends View{
     Calendar calendar = Calendar.getInstance();
     int minutes;
     int hours;
+    int second;
 
 
     public ClockView(Context context) {
@@ -60,6 +61,12 @@ public class ClockView extends View{
         paint.setTextSize(50);
         paint.setStrokeWidth(10);
 
+        paintSec = new Paint();
+        paintSec.setColor(Color.BLACK);
+        paintSec.setAntiAlias(true);
+        paintSec.setTextSize(50);
+        paintSec.setStrokeWidth(5);
+
 
     }
 
@@ -75,8 +82,14 @@ public class ClockView extends View{
 
     }
 
+
+
+
     @Override
     protected void onDraw(Canvas canvas) {
+
+        postInvalidateDelayed(500);
+        invalidate();
 
         canvas.drawCircle(cx,cy,radius,paintClock);
         canvas.drawCircle(cx,cy,12, paint);
@@ -87,31 +100,36 @@ public class ClockView extends View{
             canvas.drawText(String.valueOf(i+1), cx - 20, cy-radius+80, paint);
         }
 
-
-        calendar.setTimeZone(TimeZone.getTimeZone("GMT+3"));
-
-        int second = calendar.get(Calendar.SECOND);
-        minutes = calendar.get(Calendar.MINUTE);
-
-        hours = calendar.get(Calendar.HOUR);
-
-        int min = (360/60)*minutes;
-        canvas.save();
-        canvas.rotate(min, cx, cy);
-        canvas.drawLine(cx, cy, cx, cy-radius+60, paint);
-        canvas.restore();
+            calendar.setTimeZone(TimeZone.getTimeZone("GMT+3"));
+            second = calendar.get(Calendar.SECOND);
+            minutes = calendar.get(Calendar.MINUTE);
+            hours = calendar.get(Calendar.HOUR);
 
 
-        int hour = (360/12)*hours;
-        canvas.save();
-        canvas.rotate(hour,cx,cy);
-        canvas.drawLine(cx, cy, cx, cy-radius+150, paint);
-        canvas.restore();
+            int min = (360 / 60) * minutes;
+            canvas.save();
+            canvas.rotate(min, cx, cy);
+
+            canvas.drawLine(cx, cy, cx, cy - radius + 100, paint);
+            canvas.restore();
+
+
+            int hour = (360 / 12) * hours;
+            canvas.save();
+            canvas.rotate(hour, cx, cy);
+            canvas.drawLine(cx, cy, cx, cy - radius + 150, paint);
+            canvas.restore();
+
+            int sec = (360 / 60) * second;
+            canvas.save();
+            canvas.rotate(sec, cx, cy);
+            canvas.drawLine(cx, cy, cx, cy - radius + 60, paintSec);
+
+            canvas.restore();
 
 
 
 }
-
 
 
 }

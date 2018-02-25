@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">HomeWork1</string>
     <string name="title_activity_home_work2">HomeWork2Activity</string>
-     <string name="owl_button">OWL Activity</string>
+    <string name="owl_button">OWL Activity</string>
     <string name="clock_button">CLOCK Activity</string>
     <string name="large_text">
     </string>
     <string name="action_settings">Settings</string>
     <string name="owl_button_start">Owl, blink, please!</string>
     <string name="owl_stop_button">Ok, owl, stop!</string>
+    <string name="hw_5">HomeWork5</string>
+    <string name="switch_on_off_wifi">Switch ON/OFF WiFi</string>
 </resources>

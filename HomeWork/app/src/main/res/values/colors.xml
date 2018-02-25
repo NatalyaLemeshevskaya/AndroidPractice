@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBordeaux">#6b2d2d</color>
-    <color name="niceBackround">#fdb78696</color>
+    <color name="niceBackground">#fdb78696</color>
     <color name="clockColor">#fdd9dae1</color>
+    <color name="fineBackground">#f5f2cf</color>
+    <color name="clockBackground">#164776</color>
+
 </resources>
