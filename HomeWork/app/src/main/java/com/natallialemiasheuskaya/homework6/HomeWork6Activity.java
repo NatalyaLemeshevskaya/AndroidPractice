@@ -1,14 +1,13 @@
 package com.natallialemiasheuskaya.homework6;
 
 
+import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,15 +20,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeWork6Activity extends AppCompatActivity {
+
+
+public class HomeWork6Activity extends Activity {
 
     private RecyclerView recyclerView;
-    private  GoodsListAdapter goodsListAdapter;
-    private Root root;
-    DownloaderTask downloaderTask;
-    Button buttonLoad;
-    ProgressBar progressBar;
-    EditText textForFind;
+    private GoodsListAdapter goodsListAdapter;
+    private DownloaderTask downloaderTask;
+    private Button buttonLoad;
+    private ProgressBar progressBar;
+    private EditText textForFind;
 
 
     @Override
@@ -71,7 +71,7 @@ public class HomeWork6Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-              // findByName(s.toString());
+
             }
         });
 
@@ -90,17 +90,19 @@ public class HomeWork6Activity extends AppCompatActivity {
         protected Root doInBackground(String... strings) {
 
             try {
-                new  DownLoader().loader(HomeWork6Activity.this);
+                DownLoader.loader(HomeWork6Activity.this);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return new JSONParser().parse(HomeWork6Activity.this);
+            return JSONParser.parse(HomeWork6Activity.this);
         }
 
         @Override
         protected void onPostExecute(Root root) {
             super.onPostExecute(root);
+            if(root.getGoods() != null)
             goodsListAdapter.setGoodsList(root.getGoods());
+
             progressBar.setVisibility(View.INVISIBLE);
             textForFind.setVisibility(View.VISIBLE);
         }
@@ -108,15 +110,13 @@ public class HomeWork6Activity extends AppCompatActivity {
 
     private void findByName(String name) {
 
-
             List<Goods> goods = new ArrayList<>();
-            for (Goods g : root.getGoods()) {
+            for (Goods g : goodsListAdapter.getGoodsList()) {
                 if (g.getName().toLowerCase().contains(name.toLowerCase())) {
                     goods.add(g);
                 }
             }
             goodsListAdapter.setGoodsList(goods);
-
 
     }
 }

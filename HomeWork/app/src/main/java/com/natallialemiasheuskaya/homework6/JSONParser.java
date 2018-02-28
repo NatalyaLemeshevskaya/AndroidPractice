@@ -18,7 +18,7 @@ import java.util.Date;
 public class JSONParser  {
 
 
-    public Root parse( Context context) {
+    public static Root parse(Context context) {
 
         Root root = new Root();
 

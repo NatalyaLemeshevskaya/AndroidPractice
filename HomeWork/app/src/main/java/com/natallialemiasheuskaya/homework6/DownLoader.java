@@ -16,7 +16,7 @@ public class DownLoader {
     //Константы адресов
     private final String URL_JSON = "http://kiparo.ru/t/shop.json";
 
-    public void loader(Context context) throws IOException {
+    public static void loader(Context context) throws IOException {
         try {
             URL url = new URL("http://kiparo.ru/t/shop.json");
 
