@@ -71,6 +71,25 @@
             android:layout_marginBottom="10dp"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/b_hw7"
+            android:layout_width="match_parent"
+            android:background="#5fb7ad"
+            android:layout_height="wrap_content"
+            android:text="@string/hw_7"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/b_hw8"
+            android:layout_width="match_parent"
+            android:background="#5fb7ad"
+            android:layout_height="wrap_content"
+            android:text="@string/hw_8"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"/>
+
+
     </LinearLayout>
 
 

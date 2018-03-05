@@ -11,4 +11,7 @@
     <string name="hw_5">HomeWork5</string>
     <string name="switch_on_off_wifi">Switch ON/OFF WiFi</string>
     <string name="hw_6">HomeWork6</string>
+    <string name="hw_7">HomeWork7</string>
+    <string name="change_fragment">Click and change number</string>
+    <string name="hw_8">HomeWork8</string>
 </resources>

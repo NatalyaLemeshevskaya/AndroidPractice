@@ -14,12 +14,13 @@ import com.natallialemiasheuskaya.homework3.HomeWork3Activity;
 import com.natallialemiasheuskaya.homework4.HomeWork4Activity;
 import com.natallialemiasheuskaya.homework5.HomeWork5Activity;
 import com.natallialemiasheuskaya.homework6.HomeWork6Activity;
-import com.squareup.leakcanary.LeakCanary;
-import com.squareup.leakcanary.RefWatcher;
+import com.natallialemiasheuskaya.homework7.HomeWork7Activity;
+import com.natallialemiasheuskaya.homework8.HomeWork8Activity;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6;
+    Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         b_hw6 = (Button) findViewById(R.id.b_hw6);
         b_hw6.setOnClickListener(this);
+
+        b_hw7 = (Button) findViewById(R.id.b_hw7);
+        b_hw7.setOnClickListener(this);
+
+        b_hw8 = (Button) findViewById(R.id.b_hw8);
+        b_hw8.setOnClickListener(this);
 
     }
 
@@ -77,6 +84,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_hw6:
                 intent = new Intent(this,HomeWork6Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.b_hw7:
+                intent = new Intent(this,HomeWork7Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.b_hw8:
+                intent = new Intent(this,HomeWork8Activity.class);
                 startActivity(intent);
                 break;
             default:

@@ -30,7 +30,9 @@
         <activity android:name="com.natallialemiasheuskaya.homework4.OwlActivity" />
         <activity android:name="com.natallialemiasheuskaya.homework4.ClockActivity" />
         <activity android:name="com.natallialemiasheuskaya.homework5.HomeWork5Activity" />
-        <activity android:name="com.natallialemiasheuskaya.homework6.HomeWork6Activity"></activity>
+        <activity android:name="com.natallialemiasheuskaya.homework6.HomeWork6Activity" />
+        <activity android:name="com.natallialemiasheuskaya.homework7.HomeWork7Activity" />
+        <activity android:name="com.natallialemiasheuskaya.homework8.HomeWork8Activity"></activity>
     </application>
 
 </manifest>

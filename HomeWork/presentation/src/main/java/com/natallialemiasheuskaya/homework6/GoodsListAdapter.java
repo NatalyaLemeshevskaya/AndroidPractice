@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.natallialemiasheuskaya.homework1.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,11 +43,11 @@ public class GoodsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         Holder  myHolder = (Holder)holder;
         final Goods goods = goodsList.get(position);
 
-        myHolder.id.setText("Id: "+goods.getId());
+        myHolder.id.setText("Id"+goods.getId());
         myHolder.name.setText("Name: "+goods.getName());
         myHolder.description.setText("Description: "+goods.getDescription());
-        myHolder.year.setText("Date: "+goods.getYear().toString()+"");
-        myHolder.price.setText("Price: "+goods.getPrice()+"");
+        myHolder.year.setText("Date: "+goods.getYear().toString());
+        myHolder.price.setText("Price: "+goods.getPrice());
 
 
 
@@ -65,6 +66,7 @@ public class GoodsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         TextView description;
         TextView year;
         TextView price;
+        ImageView imageGoods;
 
 
          Holder(View itemView) {
@@ -76,6 +78,7 @@ public class GoodsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             description = itemView.findViewById(R.id.description);
             year = itemView.findViewById(R.id.year);
             price = itemView.findViewById(R.id.price);
+
 
         }
     }

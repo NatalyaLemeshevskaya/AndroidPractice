@@ -8,5 +8,7 @@
     <color name="clockColor">#fdd9dae1</color>
     <color name="fineBackground">#f5f2cf</color>
     <color name="clockBackground">#164776</color>
+    <color name="darkBackground">#334d66</color>
+
 
 </resources>
