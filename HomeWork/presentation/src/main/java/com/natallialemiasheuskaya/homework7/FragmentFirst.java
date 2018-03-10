@@ -118,6 +118,7 @@ public class FragmentFirst extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
         Activity activity = getActivity();
         if(activity!=null){
             publishContract = (PublishContract) activity;

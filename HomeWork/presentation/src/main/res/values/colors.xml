@@ -9,6 +9,8 @@
     <color name="fineBackground">#f5f2cf</color>
     <color name="clockBackground">#164776</color>
     <color name="darkBackground">#334d66</color>
+    <color name="maleBackground">#267bcc</color>
+    <color name="femaleBackground">#b13d4d</color>
 
 
 </resources>

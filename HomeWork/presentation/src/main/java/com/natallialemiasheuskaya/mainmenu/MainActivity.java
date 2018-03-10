@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.natallialemiasheuskaya.TestActivity;
 import com.natallialemiasheuskaya.homework1.HomeWork1Activity;
 import com.natallialemiasheuskaya.homework1.R;
 import com.natallialemiasheuskaya.homework2.HomeWork2Activity;
@@ -16,11 +17,12 @@ import com.natallialemiasheuskaya.homework5.HomeWork5Activity;
 import com.natallialemiasheuskaya.homework6.HomeWork6Activity;
 import com.natallialemiasheuskaya.homework7.HomeWork7Activity;
 import com.natallialemiasheuskaya.homework8.HomeWork8Activity;
+import com.natallialemiasheuskaya.homework9.HomeWork9Activity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8;
+    Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8,b_test,b_hw9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         b_hw8 = (Button) findViewById(R.id.b_hw8);
         b_hw8.setOnClickListener(this);
+
+        b_hw9 = (Button) findViewById(R.id.b_hw9);
+        b_hw9.setOnClickListener(this);
+
+        b_test = (Button) findViewById(R.id.b_test);
+        b_test.setOnClickListener(this);
 
     }
 
@@ -92,6 +100,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_hw8:
                 intent = new Intent(this,HomeWork8Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.b_hw9:
+                intent = new Intent(this,HomeWork9Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.b_test:
+                intent = new Intent(this, TestActivity.class);
                 startActivity(intent);
                 break;
             default:

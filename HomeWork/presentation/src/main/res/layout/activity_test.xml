@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+    <variable
+        name="myEntity"
+        type="com.natallialemiasheuskaya.MyEntity"/>
+    </data>
+
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.natallialemiasheuskaya.TestActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="@{myEntity.text}"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@{myEntity.buttonVisible ? View.VISIBLE:View.GONE}"
+        android:text="@{myEntity.textButton}"
+        android:onClick="@{myEntity::buttonClick}"
+        android:background="@color/fineBackground"/>
+
+</LinearLayout>
+    </layout>

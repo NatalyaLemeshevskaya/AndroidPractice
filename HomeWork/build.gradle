@@ -15,6 +15,44 @@ buildscript {
     }
 }
 
+ext{
+
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.2"
+    minSdkVersion = 15
+    targetSdkVersion = 27
+
+    androidBindingVersion = "3.0.0"
+
+    rxjavaversoin = "2.1.10"
+    rxandroidversoin = "2.0.2"
+
+    gsonVersion = "2.8.0"
+
+    picassoVersoin = "2.5.2"
+
+
+    dependencies  = [
+
+            supportAppCompact : "com.android.support:appcompat-v7:$buildToolsVersion",
+            supportv4 : "com.android.support:support-v4:$buildToolsVersion",
+            supportdesign : "com.android.support:design:$buildToolsVersion",
+
+            androidBindingCompiler : "com.android.databinding:compiler:$androidBindingVersion",
+
+            rxandroid :  "io.reactivex.rxjava2:rxandroid:$rxandroidversoin",
+            rxjava : "io.reactivex.rxjava2:rxjava:$rxjavaversoin",
+
+            gson : "com.google.code.gson:gson:$gsonVersion",
+
+            picasso : "com.squareup.picasso:picasso:$picassoVersoin",
+
+
+    ]
+
+}
+
+
 allprojects {
     repositories {
         google()
