@@ -21,11 +21,13 @@ public class HomeWork9Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         ActivityHomeWork9Binding binding =
                 DataBindingUtil.setContentView(this,R.layout.activity_home_work9);
 
+        binding.setUserVM(new UserViewModel());
         Observable<User> observable = Observable.just(new User("Иван","Петров",25,"male"));
-        disposable = observable.delay(3, TimeUnit.SECONDS).subscribe(user -> binding.setUser(user));
+        disposable = observable.delay(3, TimeUnit.SECONDS).subscribe(user -> binding.getUserVM().setUser(user));
     }
 
 
