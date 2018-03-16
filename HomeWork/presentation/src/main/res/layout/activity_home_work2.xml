@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="#0a0909"
-    tools:context="com.natallialemiasheuskaya.homework2.HomeWork2Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework2.HomeWork2Activity">
 
 
         <LinearLayout

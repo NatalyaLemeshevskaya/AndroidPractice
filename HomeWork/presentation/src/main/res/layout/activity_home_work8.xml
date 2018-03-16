@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fineBackground"
-    tools:context="com.natallialemiasheuskaya.homework8.HomeWork8Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework8.HomeWork8Activity">
 
     <TextView
         android:id="@+id/textViewNumber"

@@ -8,58 +8,54 @@ import android.view.View;
 import android.widget.Button;
 
 import com.natallialemiasheuskaya.TestActivity;
-import com.natallialemiasheuskaya.homework1.HomeWork1Activity;
-import com.natallialemiasheuskaya.homework1.R;
-import com.natallialemiasheuskaya.homework2.HomeWork2Activity;
-import com.natallialemiasheuskaya.homework3.HomeWork3Activity;
-import com.natallialemiasheuskaya.homework4.HomeWork4Activity;
-import com.natallialemiasheuskaya.homework5.HomeWork5Activity;
-import com.natallialemiasheuskaya.homework6.HomeWork6Activity;
-import com.natallialemiasheuskaya.homework7.HomeWork7Activity;
-import com.natallialemiasheuskaya.homework8.HomeWork8Activity;
-import com.natallialemiasheuskaya.homework9.HomeWork9Activity;
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
+import com.natallialemiasheuskaya.base.BaseViewModel;
+import com.natallialemiasheuskaya.sreens.homework1.HomeWork1Activity;
+import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityMainBinding;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityUserBinding;
+import com.natallialemiasheuskaya.sreens.homework10.UserActivity;
+import com.natallialemiasheuskaya.sreens.homework10.UserViewModel;
+import com.natallialemiasheuskaya.sreens.homework2.HomeWork2Activity;
+import com.natallialemiasheuskaya.sreens.homework3.HomeWork3Activity;
+import com.natallialemiasheuskaya.sreens.homework4.HomeWork4Activity;
+import com.natallialemiasheuskaya.sreens.homework5.HomeWork5Activity;
+import com.natallialemiasheuskaya.sreens.homework6.HomeWork6Activity;
+import com.natallialemiasheuskaya.sreens.homework7.HomeWork7Activity;
+import com.natallialemiasheuskaya.sreens.homework8.HomeWork8Activity;
+import com.natallialemiasheuskaya.sreens.homework9.HomeWork9Activity;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,BaseViewModel> implements View.OnClickListener {
 
-    Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8,b_test,b_hw9;
+   // Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8,b_test,b_hw9,b_hw10;
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public BaseViewModel provideViewModel() {
+        return new MainViewModel();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
-        Log.e("hw","msg");
 
-        b_hw1 = (Button) findViewById(R.id.b_hw1);
-        b_hw1.setOnClickListener(this);
-
-        b_hw2 = (Button) findViewById(R.id.b_hw2);
-        b_hw2.setOnClickListener(this);
-
-        b_hw3 = (Button) findViewById(R.id.b_hw3);
-        b_hw3.setOnClickListener(this);
-
-        b_hw4 = (Button) findViewById(R.id.b_hw4);
-        b_hw4.setOnClickListener(this);
-
-        b_hw5 = (Button) findViewById(R.id.b_hw5);
-        b_hw5.setOnClickListener(this);
-
-        b_hw6 = (Button) findViewById(R.id.b_hw6);
-        b_hw6.setOnClickListener(this);
-
-        b_hw7 = (Button) findViewById(R.id.b_hw7);
-        b_hw7.setOnClickListener(this);
-
-        b_hw8 = (Button) findViewById(R.id.b_hw8);
-        b_hw8.setOnClickListener(this);
-
-        b_hw9 = (Button) findViewById(R.id.b_hw9);
-        b_hw9.setOnClickListener(this);
-
-        b_test = (Button) findViewById(R.id.b_test);
-        b_test.setOnClickListener(this);
+        binding.bHw1.setOnClickListener(this);
+        binding.bHw2.setOnClickListener(this);
+        binding.bHw3.setOnClickListener(this);
+        binding.bHw4.setOnClickListener(this);
+        binding.bHw5.setOnClickListener(this);
+        binding.bHw6.setOnClickListener(this);
+        binding.bHw7.setOnClickListener(this);
+        binding.bHw9.setOnClickListener(this);
+        binding.bHw10.setOnClickListener(this);
+        binding.bTest.setOnClickListener(this);
 
     }
 
@@ -108,6 +104,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_test:
                 intent = new Intent(this, TestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.b_hw10:
+                intent = new Intent(this,UserActivity.class);
                 startActivity(intent);
                 break;
             default:

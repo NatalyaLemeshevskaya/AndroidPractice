@@ -7,8 +7,8 @@
         <import type="android.view.View"/>
 
         <variable
-            name="userVM"
-            type="com.natallialemiasheuskaya.homework9.UserViewModel">
+            name="viewModel"
+            type="com.natallialemiasheuskaya.sreens.homework9.User9ViewModel">
         </variable>
 
 
@@ -19,31 +19,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@{userVM.male ? @color/maleBackground:@color/femaleBackground }"
+    android:background="@{viewModel.male ? @color/maleBackground:@color/femaleBackground }"
     android:orientation="vertical"
-    tools:context="com.natallialemiasheuskaya.homework9.HomeWork9Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework9.HomeWork9Activity">
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:imageUrl="@{userVM.male? userVM.imageBoy: userVM.imageGirl}"/>
-
+        app:imageUrl="@{viewModel.male ? viewModel.imageBoy: viewModel.imageGirl}"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='@{"Name: "+userVM.firstName}'
+        android:text='@{"Name: "+viewModel.firstName}'
         android:textSize="@dimen/text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='@{"Surname: "+userVM.lastName}'
+        android:text='@{"Surname: "+viewModel.lastName}'
         android:textSize="@dimen/text_size"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='@{"Age: "+userVM.age}'
+        android:text='@{"Age: "+String.valueOf(viewModel.age)}'
         android:textSize="@dimen/text_size"/>
 
 

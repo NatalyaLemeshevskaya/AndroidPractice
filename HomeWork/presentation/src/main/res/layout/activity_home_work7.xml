@@ -7,7 +7,7 @@
     android:background="@color/darkBackground"
     android:padding="@dimen/padding"
     android:orientation="vertical"
-    tools:context="com.natallialemiasheuskaya.homework7.HomeWork7Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework7.HomeWork7Activity">
 
     <Button
         android:id="@+id/buttonFragment"

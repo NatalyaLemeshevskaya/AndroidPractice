@@ -5,8 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.natallialemiasheuskaya.homework1.R;
-import com.natallialemiasheuskaya.homework1.databinding.ActivityTestBinding;
+import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityTestBinding;
 
 public class TestActivity extends AppCompatActivity {
 

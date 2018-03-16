@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="2"
     android:background="@color/fineBackground"
-    tools:context="com.natallialemiasheuskaya.homework5.HomeWork5Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework5.HomeWork5Activity">
 
 
     <ImageView

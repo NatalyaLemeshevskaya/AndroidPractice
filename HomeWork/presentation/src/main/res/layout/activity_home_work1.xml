@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="#86c9c2"
-    tools:context="com.natallialemiasheuskaya.homework1.HomeWork1Activity">
+    tools:context="com.natallialemiasheuskaya.sreens.homework1.HomeWork1Activity">
 
 
 
