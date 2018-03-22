@@ -8,12 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityHomeWork7Binding;
 
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
 
-public class HomeWork7Activity extends AppCompatActivity implements PublishContract{
+public class HomeWork7Activity extends BaseMVVMActivity<ActivityHomeWork7Binding,HW7ViewModel> implements PublishContract{
 
 
     FragmentManager manager = getSupportFragmentManager();
@@ -22,6 +24,16 @@ public class HomeWork7Activity extends AppCompatActivity implements PublishContr
     private PublishSubject<Integer> publishSubject = PublishSubject.create();
 
     private int count = 0;
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_home_work7;
+    }
+
+    @Override
+    public HW7ViewModel provideViewModel() {
+        return new HW7ViewModel();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

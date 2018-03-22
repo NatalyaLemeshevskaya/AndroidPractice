@@ -23,8 +23,6 @@ public class HomeWork4Activity extends AppCompatActivity implements View.OnClick
         clockButton = (Button) findViewById(R.id.clockButton);
         clockButton.setOnClickListener(this);
 
-
-
     }
 
     @Override

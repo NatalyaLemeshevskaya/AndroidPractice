@@ -12,14 +12,27 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityHomeWork5Binding;
 
-public class HomeWork5Activity extends AppCompatActivity {
+public class HomeWork5Activity extends BaseMVVMActivity<ActivityHomeWork5Binding,HW5ViewModel> {
 
 
     ImageView imageWifi;
     IntentFilter intentFilter;
     Button wifiButton;
+
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_home_work5;
+    }
+
+    @Override
+    public HW5ViewModel provideViewModel() {
+        return new HW5ViewModel();
+    }
 
 
     @Override

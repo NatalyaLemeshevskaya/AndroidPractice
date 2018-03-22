@@ -7,13 +7,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityOwlBinding;
 
-public class OwlActivity extends AppCompatActivity {
+public class OwlActivity extends BaseMVVMActivity<ActivityOwlBinding,OwlViewModel> {
 
     ImageView owlImage;
     Button owl_start,owl_stop;
     AnimationDrawable animationDrawable;
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_owl;
+    }
+
+    @Override
+    public OwlViewModel provideViewModel() {
+        return new OwlViewModel();
+    }
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

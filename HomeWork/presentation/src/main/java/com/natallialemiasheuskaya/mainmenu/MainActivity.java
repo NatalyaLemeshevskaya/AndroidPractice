@@ -28,7 +28,6 @@ import com.natallialemiasheuskaya.sreens.homework9.HomeWork9Activity;
 
 public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,BaseViewModel> implements View.OnClickListener {
 
-   // Button b_hw1,b_hw2,b_hw3,b_hw4,b_hw5,b_hw6,b_hw7,b_hw8,b_test,b_hw9,b_hw10;
 
     @Override
     public int provideLayoutId() {

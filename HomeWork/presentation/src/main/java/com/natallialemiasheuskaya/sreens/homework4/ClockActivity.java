@@ -1,18 +1,34 @@
 package com.natallialemiasheuskaya.sreens.homework4;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityClockBinding;
 
-public class ClockActivity extends AppCompatActivity {
+public class ClockActivity extends BaseMVVMActivity<ActivityClockBinding,ClockViewModel> {
 
     ClockActivity clockActivity;
 
     ImageView imageOwl;
     AnimationDrawable animationDrawable;
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_clock;
+    }
+
+    @Override
+    public ClockViewModel provideViewModel() {
+        return new ClockViewModel();
+    }
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

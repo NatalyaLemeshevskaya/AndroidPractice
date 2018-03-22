@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityHomeWork8Binding;
 
 
 import java.util.concurrent.TimeUnit;
@@ -15,13 +17,23 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class HomeWork8Activity extends AppCompatActivity {
+public class HomeWork8Activity extends BaseMVVMActivity<ActivityHomeWork8Binding,HW8ViewModel> {
 
 
     private TextView textViewNumber;
     private Observable<Long> observable;
     private Disposable disposable;
 
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_home_work8;
+    }
+
+    @Override
+    public HW8ViewModel provideViewModel() {
+        return new HW8ViewModel();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

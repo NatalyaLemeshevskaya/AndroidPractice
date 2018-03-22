@@ -14,7 +14,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 
+import com.natallialemiasheuskaya.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.sreens.homework1.R;
+import com.natallialemiasheuskaya.sreens.homework1.databinding.ActivityHomeWork6Binding;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ import java.util.List;
 
 
 
-public class HomeWork6Activity extends Activity {
+public class HomeWork6Activity extends BaseMVVMActivity<ActivityHomeWork6Binding, HW6ViewModel> {
 
     private RecyclerView recyclerView;
     private GoodsListAdapter goodsListAdapter;
@@ -31,6 +33,16 @@ public class HomeWork6Activity extends Activity {
     private ProgressBar progressBar;
     private EditText textForFind;
 
+
+    @Override
+    public int provideLayoutId() {
+        return R.layout.activity_home_work6;
+    }
+
+    @Override
+    public HW6ViewModel provideViewModel() {
+        return new HW6ViewModel();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
