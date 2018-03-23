@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework6.HW6ViewModel">
+            type="com.natallialemiasheuskaya.presentation.sreens.homework6.HW6ViewModel">
         </variable>
     </data>
 <LinearLayout
@@ -18,7 +18,7 @@
     android:orientation="vertical"
     android:background="@color/niceBackground"
     android:padding="@dimen/padding"
-    tools:context="com.natallialemiasheuskaya.sreens.homework6.HomeWork6Activity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.homework6.HomeWork6Activity">
 
     <EditText
         android:id="@+id/textForFind"

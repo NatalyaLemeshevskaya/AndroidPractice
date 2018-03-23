@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework9.User9ViewModel">
+            type="com.natallialemiasheuskaya.presentation.sreens.homework9.User9ViewModel">
         </variable>
 
 
@@ -21,7 +21,7 @@
     android:layout_height="match_parent"
     android:background="@{viewModel.male ? @color/maleBackground:@color/femaleBackground }"
     android:orientation="vertical"
-    tools:context="com.natallialemiasheuskaya.sreens.homework9.HomeWork9Activity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.homework9.HomeWork9Activity">
 
     <ImageView
         android:layout_width="200dp"

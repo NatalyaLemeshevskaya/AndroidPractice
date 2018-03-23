@@ -30,6 +30,9 @@ dependencies {
     implementation dependency.gson
     api project(path: ':domain')
 
+    api dependency.retrofit
+
+    implementation dependency.javaxInject
 
 
 }

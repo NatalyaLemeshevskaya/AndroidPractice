@@ -5,7 +5,7 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.natallialemiasheuskaya.sreens.homework1"
+        applicationId "com.natallialemiasheuskaya.presentation.sreens.homework1"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
@@ -42,8 +42,14 @@ dependencies {
     implementation dependency.supportv4
     implementation dependency.supportdesign
 
+    implementation dependency.archComponentsExtensions
+    annotationProcessor dependency.archComponentsCompiler
+
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     annotationProcessor dependency.androidBindingCompiler
+
+    implementation dependency.dagger
+    annotationProcessor dependency.daggerCompiler
 
     implementation dependency.rxandroid
 
@@ -52,4 +58,6 @@ dependencies {
 
     implementation dependency.gson
     api project(path: ':domain')
+    api project(path: ':data')
+
 }

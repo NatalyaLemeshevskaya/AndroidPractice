@@ -22,6 +22,10 @@ ext{
     minSdkVersion = 15
     targetSdkVersion = 27
 
+
+    androidBindingVersion = "3.0.0"
+    archComponentVersion = "1.0.0"
+
     androidBindingVersion = "3.0.0"
 
     rxjavaversoin = "2.1.10"
@@ -29,7 +33,13 @@ ext{
 
     gsonVersion = "2.8.0"
 
+    daggerVersion = "2.15"
+    javaInjectVersion = "1"
+
     picassoVersoin = "2.5.2"
+
+    retrofitVersion = "2.4.0"
+
 
 
     dependencies  = [
@@ -40,12 +50,22 @@ ext{
 
             androidBindingCompiler : "com.android.databinding:compiler:$androidBindingVersion",
 
+            archComponentsExtensions: "android.arch.lifecycle:extensions:$archComponentVersion",
+            archComponentsCompiler:  "android.arch.lifecycle:compiler:$archComponentVersion",
+
+            dagger: "com.google.dagger:dagger:$daggerVersion",
+            daggerCompiler: "com.google.dagger:dagger-compiler:$daggerVersion",
+            javaxInject: "javax.inject:javax.inject:$javaInjectVersion",
+
             rxandroid :  "io.reactivex.rxjava2:rxandroid:$rxandroidversoin",
             rxjava : "io.reactivex.rxjava2:rxjava:$rxjavaversoin",
 
             gson : "com.google.code.gson:gson:$gsonVersion",
 
             picasso : "com.squareup.picasso:picasso:$picassoVersoin",
+
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
 
 
     ]

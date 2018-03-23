@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework4.OwlViewModel">
+            type="com.natallialemiasheuskaya.presentation.sreens.homework4.OwlViewModel">
         </variable>
 
     </data>
@@ -18,7 +18,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/padding"
-    tools:context="com.natallialemiasheuskaya.sreens.homework4.OwlActivity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.homework4.OwlActivity">
 
 
     <ImageView

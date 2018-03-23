@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework4.ClockViewModel">
+            type="com.natallialemiasheuskaya.presentation.sreens.homework4.ClockViewModel">
         </variable>
 
     </data>
@@ -16,16 +16,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.natallialemiasheuskaya.sreens.homework4.ClockActivity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.homework4.ClockActivity">
 
 
-    <com.natallialemiasheuskaya.sreens.homework4.ClockView
+    <com.natallialemiasheuskaya.presentation.sreens.homework4.ClockView
         android:id="@+id/clockView"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center">
 
-    </com.natallialemiasheuskaya.sreens.homework4.ClockView>
+    </com.natallialemiasheuskaya.presentation.sreens.homework4.ClockView>
 
 
     <ImageView

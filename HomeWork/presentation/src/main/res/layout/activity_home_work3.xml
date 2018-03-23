@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework3.HW3ViewModel">
+            type="com.natallialemiasheuskaya.presentation.sreens.homework3.HW3ViewModel">
         </variable>
 
     </data>
@@ -20,7 +20,7 @@
     android:background="#89c189"
     android:orientation="vertical"
     android:padding = "10dp"
-    tools:context="com.natallialemiasheuskaya.sreens.homework3.HomeWork3Activity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.homework3.HomeWork3Activity">
 
     <Button
         android:id="@+id/buttonTree"

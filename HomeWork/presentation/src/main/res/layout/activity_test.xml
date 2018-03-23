@@ -8,7 +8,7 @@
         <import type="android.view.View"/>
     <variable
         name="myEntity"
-        type="com.natallialemiasheuskaya.MyEntity"/>
+        type="com.natallialemiasheuskaya.presentation.sreens.MyEntity"/>
     </data>
 
 
@@ -17,7 +17,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.natallialemiasheuskaya.TestActivity">
+    tools:context="com.natallialemiasheuskaya.presentation.sreens.TestActivity">
 
     <TextView
         android:layout_width="match_parent"

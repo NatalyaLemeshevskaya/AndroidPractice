@@ -9,7 +9,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.natallialemiasheuskaya.sreens.homework10.UserViewModel" />
+            type="com.natallialemiasheuskaya.presentation.sreens.homework10.UserViewModel" />
 
     </data>
 

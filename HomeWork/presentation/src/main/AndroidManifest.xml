@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.natallialemiasheuskaya.sreens.homework1">
+    package="com.natallialemiasheuskaya.presentation.sreens.homework1">
 
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.natallialemiasheuskaya.mainmenu.MainActivity">
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.mainmenu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,17 +24,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeWork1Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework2.HomeWork2Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework3.HomeWork3Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework4.HomeWork4Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework4.OwlActivity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework4.ClockActivity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework5.HomeWork5Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework6.HomeWork6Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework7.HomeWork7Activity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework8.HomeWork8Activity" />
-        <activity android:name="com.natallialemiasheuskaya.TestActivity" />
-        <activity android:name="com.natallialemiasheuskaya.sreens.homework9.HomeWork9Activity"></activity>
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework2.HomeWork2Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework3.HomeWork3Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework4.HomeWork4Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework4.OwlActivity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework4.ClockActivity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework5.HomeWork5Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework6.HomeWork6Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework7.HomeWork7Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework8.HomeWork8Activity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.TestActivity" />
+        <activity android:name="com.natallialemiasheuskaya.presentation.sreens.homework9.HomeWork9Activity"></activity>
     </application>
 
 </manifest>
