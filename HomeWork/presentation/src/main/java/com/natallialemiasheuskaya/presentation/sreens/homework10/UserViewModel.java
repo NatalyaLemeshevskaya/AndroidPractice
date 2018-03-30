@@ -22,7 +22,7 @@ public class UserViewModel extends BaseViewModel {
     @Override
     public void createInject() {
 
-        App.getAppComponent().inject(this);
+       // App.getAppComponent().inject(this);
 
     }
 

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.natallialemiasheuskaya.TestActivity;
 import com.natallialemiasheuskaya.presentation.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.presentation.base.BaseViewModel;
 import com.natallialemiasheuskaya.presentation.sreens.homework1.HomeWork1Activity;
@@ -50,6 +49,7 @@ public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,BaseViewM
         binding.bHw9.setOnClickListener(this);
         binding.bHw10.setOnClickListener(this);
         binding.bTest.setOnClickListener(this);
+        binding.bHw12.setOnClickListener(this);
 
     }
 
@@ -94,10 +94,6 @@ public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,BaseViewM
                 break;
             case R.id.b_hw9:
                 intent = new Intent(this,HomeWork9Activity.class);
-                startActivity(intent);
-                break;
-            case R.id.b_test:
-                intent = new Intent(this, TestActivity.class);
                 startActivity(intent);
                 break;
             case R.id.b_hw10:

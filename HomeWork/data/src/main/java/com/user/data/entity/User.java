@@ -2,16 +2,15 @@ package com.user.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by natallialemiasheuskaya on 19.03.2018.
- */
-
 public class User {
 
     @SerializedName("objectId")
     private String objectId;
+    @SerializedName("userName")
     private String userName;
+    @SerializedName("age")
     private int age;
+    @SerializedName("profileUrl")
     private String profileUrl;
 
     public String getObjectId() {

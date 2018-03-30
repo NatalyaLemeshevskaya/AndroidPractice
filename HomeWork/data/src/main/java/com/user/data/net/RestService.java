@@ -8,6 +8,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import io.reactivex.Completable;
 import io.reactivex.Observable;
 import retrofit2.http.Path;
 
@@ -28,6 +29,14 @@ public class RestService {
 
     public Observable<User> loadUserById(@Path("id") String id){
         return restApi.loadUserById(id);
+    }
+
+    public Completable saveUser(User user) {
+        return restApi.saveUser(user);
+    }
+
+    public Completable removeUser(String id) {
+        return restApi.removeUser(id);
     }
 
 }

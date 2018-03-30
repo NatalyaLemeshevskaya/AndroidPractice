@@ -32,6 +32,13 @@ dependencies {
 
     api dependency.retrofit
 
+    api dependency.gsonConverter
+    api dependency.rxAdapter
+
+    api dependency.okHttp
+    api dependency.okHttpLoggin
+
+
     implementation dependency.javaxInject
 
 

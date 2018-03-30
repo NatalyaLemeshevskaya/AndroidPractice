@@ -1,7 +1,5 @@
 package com.user.domain.repository;
 
-
-
 import com.user.domain.entity.UserEntity;
 
 import java.util.List;
@@ -13,9 +11,6 @@ public interface UserRepository {
 
     Observable<UserEntity> get(String id);
     Observable<List<UserEntity>> get();
-    Completable save();
-    Completable remove();
-
-
-
+    Completable save(UserEntity userEntity);
+    Completable remove(String id);
 }

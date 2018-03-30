@@ -29,19 +29,6 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Observable<UserEntity> get(String id) {
-//                 return  io.reactivex.Observable.create(new ObservableOnSubscribe<UserEntity>(){
-//            @Override
-//            public void subscribe(ObservableEmitter<UserEntity> emitter) throws Exception{
-//                Thread.sleep(5000);
-//
-//                UserEntity entity = new UserEntity("super username", 20, "");
-//
-//                emitter.onNext(entity);
-//                emitter.onComplete();
-//
-//
-//            }
-//        });
 
         return restService.loadUserById(id)
                 .map(new Function<User, UserEntity>() {
@@ -50,7 +37,7 @@ public class UserRepositoryImpl implements UserRepository {
                     public UserEntity apply(User user) throws Exception {
                         return new UserEntity(user.getUserName(),
                                 user.getAge(),
-                                user.getProfileUrl());
+                                user.getProfileUrl(),user.getObjectId());
                     }
                 });
     }
@@ -69,8 +56,7 @@ public class UserRepositoryImpl implements UserRepository {
                 List<UserEntity> list = new ArrayList<>();
                 for(User user: users){
                     list.add(new UserEntity(user.getUserName(),
-                            user.getAge(),
-                            user.getProfileUrl()));
+                            user.getAge(),user.getProfileUrl(),user.getObjectId()));
                 }
                 return list;
             }
@@ -78,12 +64,17 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Completable save() {
-        return null;
+    public Completable save(UserEntity userEntity) {
+        User user = new User();
+        user.setUserName(userEntity.getUserName());
+        user.setProfileUrl(userEntity.getProfileUrl());
+        user.setAge(userEntity.getAge());
+        user.setObjectId(userEntity.getId());
+        return restService.saveUser(user);
     }
 
     @Override
-    public Completable remove() {
-        return null;
+    public Completable remove(String id) {
+        return restService.removeUser(id);
     }
 }
