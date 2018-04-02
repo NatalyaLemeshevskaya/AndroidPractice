@@ -2,7 +2,7 @@ package com.natallialemiasheuskaya.dragon.injection;
 
 
 
-import com.natallialemiasheuskaya.dragon.screens.MainViewModel;
+import com.natallialemiasheuskaya.dragon.presentation.screens.MainViewModel;
 
 import javax.inject.Singleton;
 

@@ -5,7 +5,7 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.natallialemiasheuskaya.class1"
+        applicationId "com.natallialemiasheuskaya.dragon"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
@@ -19,11 +19,6 @@ android {
         }
     }
 
-
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
-    }
     dataBinding {
         enabled = true
     }
@@ -51,7 +46,7 @@ dependencies {
 
     implementation dependency.picasso
     implementation dependency.glide
-
+    annotationProcessor dependency.glideCompiler
 
     implementation dependency.gson
     api project(path: ':domain')

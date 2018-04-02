@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.dragon.screens;
+package com.natallialemiasheuskaya.dragon.presentation.screens;
 
 import android.databinding.ObservableField;
 import android.text.Editable;
@@ -8,7 +8,7 @@ import com.natallialemiasheuskaya.domain.entity.ImageEntity;
 import com.natallialemiasheuskaya.domain.interactors.SearchUseCase;
 import com.natallialemiasheuskaya.domain.interactors.TrendingUseCase;
 import com.natallialemiasheuskaya.dragon.app.App;
-import com.natallialemiasheuskaya.dragon.base.BaseViewModel;
+import com.natallialemiasheuskaya.dragon.presentation.base.BaseViewModel;
 
 
 import java.util.List;
@@ -23,6 +23,8 @@ import io.reactivex.disposables.Disposable;
 public class MainViewModel extends BaseViewModel {
 
 
+    public ItemAdapter itemAdapter = new ItemAdapter();
+
 
     public ObservableField<List<ImageEntity>> list = new ObservableField<>();
 
@@ -31,6 +33,7 @@ public class MainViewModel extends BaseViewModel {
 
     @Inject
     public SearchUseCase searchUseCase;
+
 
     @Override
     public void createInject() {
@@ -52,13 +55,15 @@ public class MainViewModel extends BaseViewModel {
 
             @Override
             public void onNext(List<ImageEntity> imageEntities) {
-                Log.e("sds","onNext");
-                list.set(imageEntities);
+                Log.e("sds","onNext " + imageEntities.size());
+                itemAdapter.setImageList(imageEntities);
+                Log.e("sds","onNext " + imageEntities.get(1).getUrl());
+
             }
 
             @Override
             public void onError(Throwable e) {
-
+                Log.e("sds","error  " + e.toString());
             }
 
             @Override
@@ -67,20 +72,21 @@ public class MainViewModel extends BaseViewModel {
             }
         });
 
-
     }
 
-    public void searchImage(Editable name){
+    public void afterTextChanged(Editable search){
 
-        searchUseCase.searchImage(name.toString()).subscribe(new Observer<List<ImageEntity>>() {
+
+        searchUseCase.searchImage(search.toString()).subscribe(new Observer<List<ImageEntity>>() {
             @Override
             public void onSubscribe(Disposable d) {
                 compositeDisposable.add(d);
+
             }
 
             @Override
             public void onNext(List<ImageEntity> imageEntities) {
-                list.set(imageEntities);
+                itemAdapter.setImageList(imageEntities);
 
             }
 
@@ -96,5 +102,8 @@ public class MainViewModel extends BaseViewModel {
         });
 
     }
+
+
+
 
 }

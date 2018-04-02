@@ -8,7 +8,6 @@ public class ImageEntity {
 
     private String url;
 
-
     public ImageEntity() {
     }
 

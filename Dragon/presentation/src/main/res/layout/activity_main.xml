@@ -5,32 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-    <import type="android.view.View"/>
+        <import type="android.view.View"/>
 
     <variable
         name="viewModel"
-        type="com.natallialemiasheuskaya.dragon.screens.MainViewModel">
+        type="com.natallialemiasheuskaya.dragon.presentation.screens.MainViewModel">
     </variable>
     </data>
 
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.natallialemiasheuskaya.dragon.screens.MainActivity">
+    android:layout_height="match_parent">
 
     <EditText
+        android:hint="find gif by name"
+        android:id="@+id/textChang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-        <!--android:afterTextChanged="@{(name)->viewModel.searchImage(name)}"/>-->
-
+        android:layout_height="wrap_content"
+        android:afterTextChanged="@{viewModel::afterTextChanged}"/>
 
  <android.support.v7.widget.RecyclerView
-
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:id="@+id/recyclerView"
-     android:entries="@{viewModel.list}">
+     android:id="@+id/recyclerView">
  </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

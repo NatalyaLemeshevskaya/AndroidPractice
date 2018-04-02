@@ -1,7 +1,5 @@
 package com.natallialemiasheuskaya.data.repository;
 
-import android.content.Context;
-
 import com.natallialemiasheuskaya.data.entity.Image;
 import com.natallialemiasheuskaya.data.net.RestService;
 import com.natallialemiasheuskaya.domain.entity.ImageEntity;
@@ -37,7 +35,7 @@ public class ImageRepositoryImpl implements ImageRepository{
             public List<ImageEntity> apply(List<Image> images) throws Exception {
                 List<ImageEntity> list = new ArrayList<>();
                 for(Image i:images){
-                    list.add(new ImageEntity(i.getUrl()));
+                    list.add(new ImageEntity(i.getImages().getOriginal().getUrl()));
                 }
 
                 return list;
@@ -53,7 +51,7 @@ public class ImageRepositoryImpl implements ImageRepository{
 
                 List<ImageEntity> list = new ArrayList<>();
                 for(Image i:images){
-                    list.add(new ImageEntity(i.getUrl()));
+                    list.add(new ImageEntity(i.getImages().getOriginal().getUrl()));
                 }
 
                 return list;

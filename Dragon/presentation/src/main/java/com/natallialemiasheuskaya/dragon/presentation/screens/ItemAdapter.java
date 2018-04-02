@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.dragon.screens;
+package com.natallialemiasheuskaya.dragon.presentation.screens;
 
 
 import android.databinding.DataBindingUtil;
@@ -21,6 +21,7 @@ import java.util.List;
 public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
     private List<ImageEntity> list = new ArrayList<>();
+
 
 
     public void setImageList(List<ImageEntity> list) {

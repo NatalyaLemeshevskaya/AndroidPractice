@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.dragon.base;
+package com.natallialemiasheuskaya.dragon.presentation.base;
 
 
 import android.arch.lifecycle.ViewModel;

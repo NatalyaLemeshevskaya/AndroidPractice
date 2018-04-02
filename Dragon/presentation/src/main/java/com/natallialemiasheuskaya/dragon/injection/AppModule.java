@@ -57,7 +57,7 @@ public class AppModule {// помогает даггеру найти нужны
     @Singleton
     public Retrofit getRetrofit(Gson gson){
         return new Retrofit.Builder()
-                .baseUrl("https://api.giphy.com/")
+                .baseUrl("http://api.giphy.com/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();

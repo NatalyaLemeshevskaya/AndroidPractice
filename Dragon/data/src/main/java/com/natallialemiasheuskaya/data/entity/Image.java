@@ -2,23 +2,23 @@ package com.natallialemiasheuskaya.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by natallialemiasheuskaya on 26.03.2018.
- */
-
 public class Image {
 
-    @SerializedName("url")
-    private String url;
+    @SerializedName("images")
+    private Images images;
 
-
-    public String getUrl() {
-        return url;
+    public Image(Images images) {
+        this.images = images;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public Image() {
     }
 
+    public Images getImages() {
+        return images;
+    }
 
+    public void setImages(Images images) {
+        this.images = images;
+    }
 }

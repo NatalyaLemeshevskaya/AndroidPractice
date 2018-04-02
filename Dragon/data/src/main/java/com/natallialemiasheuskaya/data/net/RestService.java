@@ -3,6 +3,7 @@ package com.natallialemiasheuskaya.data.net;
 
 import com.natallialemiasheuskaya.data.entity.Data;
 import com.natallialemiasheuskaya.data.entity.Image;
+import com.natallialemiasheuskaya.data.entity.Images;
 
 import java.util.List;
 
@@ -11,7 +12,6 @@ import javax.inject.Singleton;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
-import retrofit2.http.Path;
 
 @Singleton
 public class RestService {
@@ -25,13 +25,13 @@ public class RestService {
     }
 
     public Observable<List<Image>> searchImage(String search){
-        return restApi.searchImage(search)
-                .map(new Function<Data, List<Image>>() {
-                    @Override
-                    public List<Image> apply(Data data) throws Exception {
-                        return data.getList();
-                    }
-                });
+        return restApi.searchImage(search).map(new Function<Data, List<Image>>() {
+            @Override
+            public List<Image> apply(Data data) throws Exception {
+                return data.getList();
+            }
+        });
+
     }
 
     public Observable<List<Image>> trendingImages(){

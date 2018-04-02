@@ -1,4 +1,4 @@
-package com.natallialemiasheuskaya.dragon.screens;
+package com.natallialemiasheuskaya.dragon.presentation.screens;
 
 
 import android.arch.lifecycle.ViewModelProviders;
@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.natallialemiasheuskaya.dragon.R;
-import com.natallialemiasheuskaya.dragon.base.BaseMVVMActivity;
+import com.natallialemiasheuskaya.dragon.presentation.base.BaseMVVMActivity;
 import com.natallialemiasheuskaya.dragon.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,MainViewModel> {
@@ -26,10 +26,11 @@ public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,MainViewM
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        RecyclerView recyclerView = binding.getRoot().findViewById(R.id.recyclerView);
-        recyclerView.setAdapter(new ItemAdapter());
+        RecyclerView recyclerView = binding.recyclerView;
+        recyclerView.setAdapter(viewModel.itemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
+
 
     }
 }
