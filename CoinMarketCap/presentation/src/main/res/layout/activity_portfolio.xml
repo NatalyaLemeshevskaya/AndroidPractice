@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.natallialemiasheuskaya.coinmarketcap.presentation.screens.allPortfolio.PortfolioViewModel">
+        </variable>
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.PortfolioActivity">
+
+    <include
+        android:id="@+id/toolbarMain"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/namePortfolio"-->
+        <!--android:padding="10dp"-->
+        <!--android:drawableLeft="@drawable/ic_work_black_24dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="30dp" />-->
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/accountRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:background="#fff"
+        android:text="@string/add_account"/>
+
+</LinearLayout>
+</layout>

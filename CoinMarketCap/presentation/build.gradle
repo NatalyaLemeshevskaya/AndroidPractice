@@ -1,0 +1,110 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.natallialemiasheuskaya.coinmarketcap"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 3
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+
+        debug {
+            storeFile file('../Debug')
+            storePassword '3351612q'
+            keyAlias 'key1'
+            keyPassword '3351612q'
+        }
+        release {
+            storeFile file('../Release')
+            storePassword '3351612q'
+            keyAlias 'key2'
+            keyPassword '3351612q'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    def dependency = rootProject.ext.dependencies
+
+    implementation dependency.supportAppCompact
+    implementation dependency.supportv4
+    implementation dependency.supportdesign
+
+    implementation dependency.archComponentsExtensions
+    annotationProcessor dependency.archComponentsCompiler
+
+
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    annotationProcessor dependency.androidBindingCompiler
+
+    implementation dependency.dagger
+    annotationProcessor dependency.daggerCompiler
+
+    implementation dependency.rxandroid
+
+    implementation dependency.picasso
+    implementation dependency.glide
+
+
+    implementation dependency.gson
+    api project(path: ':domain')
+    api project(path: ':data')
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true;
+    }
+
+}
+
+crashlytics {
+    enableNdk true
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
+}

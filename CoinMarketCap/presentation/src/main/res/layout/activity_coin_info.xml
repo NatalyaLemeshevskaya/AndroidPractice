@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.natallialemiasheuskaya.coinmarketcap.presentation.screens.myCoin.CoinInfoViewModel"/>
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.myCoin.CoinInfoActivity">
+
+    <TextView
+        android:id="@+id/detailsTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <AutoCompleteTextView
+        android:hint="@string/name_coin"
+        android:id="@+id/textAuto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"/>
+
+    <!--<AutoCompleteTextView-->
+        <!--android:hint="@string/count_coin"-->
+        <!--android:id="@+id/textAutoCount"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:completionThreshold="1"/>-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->viewModel.onClick()}"
+        android:layout_gravity="center"
+        android:text="@string/save"/>
+
+</LinearLayout>
+</layout>

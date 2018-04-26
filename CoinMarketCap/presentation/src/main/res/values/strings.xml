@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CoinMarketCap</string>
+
+    <string name="new_message_notification_title_template">New message: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="name_coin">Name Coin</string>
+    <string name="count_coin">Count</string>
+    <string name="title">Coin Market Cap</string>
+    <string name="add_coin">+ Add Coin</string>
+    <string name="add_account">+ Add Account</string>
+    <string name="name_account">Name Account</string>
+    <string name="id">id</string>
+    <string name="save">Save</string>
+
+
+</resources>
