@@ -15,11 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".presentation.screens.allCoinsList.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".presentation.screens.allPortfolio.PortfolioActivity" />
 
@@ -28,7 +23,14 @@
             android:value="15fae269eef18008a4a8f7e979f08527736e18fd" />
 
         <activity android:name=".presentation.screens.myPortfolio.CoinsActivity" />
-        <activity android:name=".presentation.screens.myCoin.CoinInfoActivity"/>
+        <activity android:name=".presentation.screens.myCoin.CoinInfoActivity" />
+        <activity android:name=".presentation.screens.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

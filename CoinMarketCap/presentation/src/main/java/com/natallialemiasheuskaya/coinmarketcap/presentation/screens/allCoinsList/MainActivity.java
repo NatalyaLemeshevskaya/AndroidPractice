@@ -66,18 +66,19 @@ public class MainActivity extends BaseMVVMActivity<ActivityMainBinding,MainViewM
 
                 switch (item.getItemId()){
                     case (R.id.nav_first_fragment) :{
-
                         Intent intent = new Intent(getApplicationContext(), PortfolioActivity.class);
                         startActivity(intent);
-
+                        break;
+                    }
+                    case (R.id.nav_second_fragment) :{
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                         break;
                     }
                 }
                 return false;
             }
         });
-
-
     }
 
 

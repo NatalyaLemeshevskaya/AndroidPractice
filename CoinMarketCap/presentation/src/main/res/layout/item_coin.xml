@@ -10,50 +10,62 @@
             type="com.natallialemiasheuskaya.domain.entity.CoinsEntity"/>
     </data>
 
-<android.support.constraint.ConstraintLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
-    <TextView
-        android:hint="@string/id"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text='@{String.valueOf(item.rank) + "."}'/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/padding">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{item.name}"
-        android:textStyle="italic"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:text="name" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@{item.symbol}"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        tools:layout_editor_absoluteY="0dp"
-        tools:text="symbol" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:hint="@string/id"
+            android:text='@{String.valueOf(item.rank) + "."}'
+            app:layout_constraintEnd_toStartOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text='@{String.valueOf(item.priceUsd) + "$"}'
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="price" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.name}"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:text="name" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@{item.symbol}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            tools:layout_editor_absoluteY="0dp"
+            tools:text="symbol" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="@dimen/text_size"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="8dp"
+            android:text='@{String.valueOf(item.priceUsd) + "$"}'
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="price" />
+
+    </android.support.constraint.ConstraintLayout>
 </layout>

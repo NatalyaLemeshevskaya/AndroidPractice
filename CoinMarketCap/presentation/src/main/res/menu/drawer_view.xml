@@ -18,7 +18,7 @@
         <item
             android:orderInCategory="2"
             android:id="@+id/nav_second_fragment"
-            android:title="Settings" />
+            android:title="Home" />
 
         <!--<item android:title="Sub items">-->
             <!--<menu>-->

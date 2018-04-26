@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
@@ -79,5 +80,12 @@ public class PortfolioActivity extends BaseMVVMActivity<ActivityPortfolioBinding
                 alertDialog.show();
             }
         });
+    }
+
+        @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.drawer_view,menu);
+        return super.onCreateOptionsMenu(menu);
+
     }
 }
